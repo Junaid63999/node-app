@@ -3,9 +3,13 @@ var express = require('express');
 var app = express();
 
 app.get('/', function (req, res) {
-    res.send('junaid also  from a hadolti');
+    res.send('junaid also from hadolti');
 });
 
-app.listen(process.env.PORT || 3000);
+if (require.main === module) {
+    app.listen(process.env.PORT || 3000, function () {
+        console.log("Server started");
+    });
+}
 
 module.exports = app;
