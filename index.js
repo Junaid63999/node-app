@@ -3,7 +3,7 @@ var express = require('express');
 var app = express();
 
 app.get('/', function (req, res) {
-    res.send('junaid also from hadolti');
+    res.send('jantar mantar');
 });
 
 if (require.main === module) {
